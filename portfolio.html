@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मेरा पोर्टफोलियो | My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        nav {
+            background-color: #1a252f;
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #18bc9c;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #18bc9c;
+            padding-bottom: 10px;
+            font-size: 1.8rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background-color: #eef2f5;
+            color: #1e3c72;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border: 1px solid #d1d5db;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: #fafafa;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            color: #2a5298;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            color: #18bc9c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #1e3c72;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #18bc9c;
+        }
+
+        footer {
+            background-color: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                padding: 10px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>I'm Himanshu Kumar</h1>
+        <p>वेब डेवलपर | डिज़ाइनर | प्रॉब्लम सॉल्वर</p>
+    </header>
+
+    <nav>
+        <a href="#about">मेरे बारे में</a>
+        <a href="#skills">कौशल (Skills)</a>
+        <a href="#projects">प्रोजेक्ट्स</a>
+        <a href="#contact">संपर्क करें</a>
+    </nav>
+
+    <div class="container">
+        
+        <!-- About Section -->
+        <section id="about">
+            <h2>मेरे बारे में (About Me)</h2>
+            <p class="about-text">
+                मैं एक उत्साही और रचनात्मक वेब डेवलपर हूँ, जो सुंदर, इंटरैक्टिव और उपयोगकर्ता के अनुकूल (user-friendly) वेबसाइट्स बनाने में विश्वास रखता है। मुझे नई तकनीकों को सीखना और चुनौतीपूर्ण समस्याओं को हल करना पसंद है। 
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>मुख्य कौशल (My Skills)</h2>
+            <div class="skills-container">
+                <span class="skill-tag">HTML5 & CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Responsive Design</span>
+                <span class="skill-tag">Python & Node.js</span>
+                <span class="skill-tag">Git & GitHub</span>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>मेरे प्रोजेक्ट्स (My Projects)</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <h3>ई-कॉमर्स वेबसाइट</h3>
+                    <p>यह एक पूरी तरह से रिस्पॉन्सिव ऑनलाइन शॉपिंग प्लेटफॉर्म है जिसे React और Node.js का उपयोग करके बनाया गया है। इसमें कार्ट सिस्टम और पेमेंट गेटवे शामिल है।</p>
+                    <a href="#" class="project-link">प्रोजेक्ट देखें &rarr;</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>टास्क मैनेजर ऐप</h3>
+                    <p>दैनिक कार्यों को व्यवस्थित करने के लिए एक सरल और सुंदर टू-डू लिस्ट एप्लीकेशन, जिसमें लोकल स्टोरेज की सुविधा है ताकि डेटा सुरक्षित रहे।</p>
+                    <a href="#" class="project-link">प्रोजेक्ट देखें &rarr;</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>मौसम का हाल (Weather App)</h3>
+                    <p>यह एप्लीकेशन API का उपयोग करके दुनिया के किसी भी शहर के मौसम की सटीक जानकारी वास्तविक समय (Real-time) में दिखाता है।</p>
+                    <a href="#" class="project-link">प्रोजेक्ट देखें &rarr;</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>मुझसे संपर्क करें (Contact Me)</h2>
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <input type="text" placeholder="आपका नाम" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="आपका ईमेल पता" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="आपका संदेश..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">संदेश भेजें</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 आपका नाम. सर्वाधिकार सुरक्षित।</p>
+    </footer>
+
+</body>
+</html>
